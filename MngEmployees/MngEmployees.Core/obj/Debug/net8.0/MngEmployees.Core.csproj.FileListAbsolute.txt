@@ -1,0 +1,12 @@
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\bin\Debug\net8.0\MngEmployees.Core.deps.json
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\bin\Debug\net8.0\MngEmployees.Core.dll
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\bin\Debug\net8.0\MngEmployees.Core.pdb
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\obj\Debug\net8.0\MngEmployees.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\obj\Debug\net8.0\MngEmployees.Core.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\obj\Debug\net8.0\MngEmployees.Core.AssemblyInfo.cs
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\obj\Debug\net8.0\MngEmployees.Core.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\obj\Debug\net8.0\MngEmployees.Core.dll
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\obj\Debug\net8.0\refint\MngEmployees.Core.dll
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\obj\Debug\net8.0\MngEmployees.Core.pdb
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\obj\Debug\net8.0\ref\MngEmployees.Core.dll
+C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\obj\Debug\net8.0\MngEmployees.Core.csproj.AssemblyReference.cache

@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
+<div class="all">
+    <div class="container">
+        <form [formGroup]="editEmployeeForm"  (ngSubmit)="updateEmployee()">
+             <h3 id="titel">Update your details</h3>
+               <label>First Name:</label>
+               <input matInput type="text" formControlName="firstName">
+               <div *ngIf="editEmployeeForm.controls['firstName']?.invalid && (editEmployeeForm.controls['firstName']?.touched || editEmployeeForm.controls['firstName']?.dirty)">
+                 <span *ngIf="editEmployeeForm.controls['firstName']?.errors?.['required']">First Name is required</span>
+                 <span *ngIf="editEmployeeForm.controls['firstName']?.errors?.['pattern']">First Name must contain only letters</span>
+               </div> 
+               <br>
+               <label>Last Name:</label>
+               <input type="text" formControlName="lastName">
+               <div *ngIf="editEmployeeForm.controls['lastName']?.invalid && (editEmployeeForm.controls['lastName']?.touched || editEmployeeForm.controls['lastName']?.dirty)">
+                 <span *ngIf="editEmployeeForm.controls['lastName']?.errors?.['required']">Last Name is required</span>
+                 <span *ngIf="editEmployeeForm.controls['lastName']?.errors?.['pattern']">Last Name must contain only letters</span>
+               </div>
+               <br>
+               <label>Identity Number:</label>
+               <input type="text" formControlName="tz">
+               <div *ngIf="editEmployeeForm.controls['tz']?.invalid && (editEmployeeForm.controls['tz']?.touched || editEmployeeForm.controls['tz']?.dirty)">
+                 <span *ngIf="editEmployeeForm.controls['tz']?.errors?.['required']">TZ is required</span>
+                 <span *ngIf="editEmployeeForm.controls['tz']?.errors?.['pattern']">TZ must contain exactly 9 digits</span>
+               </div>
+               <br>
+               <label>Start Work Date:</label>
+               <input type="date" formControlName="startWorkDate">
+               <div *ngIf="editEmployeeForm.controls['startWorkDate']?.invalid && (editEmployeeForm.controls['startWorkDate']?.touched || editEmployeeForm.controls['startWorkDate']?.dirty)">
+                 <p>This field is required!</p>
+               </div>
+               <br>
+               <label>Birth Date:</label>
+               <input type="date" formControlName="birthDate">
+               <div *ngIf="editEmployeeForm.controls['birthDate']?.invalid && (editEmployeeForm.controls['birthDate']?.touched || editEmployeeForm.controls['birthDate']?.dirty)">
+                 <span *ngIf="editEmployeeForm.controls['birthDate']?.errors?.['required']">Date of Birth is required</span>
+                 <span *ngIf="editEmployeeForm.controls['birthDate']?.errors?.['dateOfBirthInvalid']">Employee must be at least 18 years old</span>
+               </div>
+               <br>
+               <label>Gender:</label>
+               <select formControlName="gender">
+                 <option [ngValue]="0">Male</option>
+                 <option [ngValue]="1">Female</option>
+               </select>
+               <div *ngIf="editEmployeeForm.controls['gender']?.invalid && (editEmployeeForm.controls['gender']?.touched || editEmployeeForm.controls['gender']?.dirty)">
+                 <p>This field is required!</p>
+               </div> 
+               <br>
+               <div class="row" *ngFor="let roleForm of roleGroups ; let i = index" [formGroup]="roleForm ">
+                 <div class="col">
+                   <label for="roleId">Position</label>
+                   <select id="roleId" name="roleId" formControlName="roleId" class="form-select" required>
+                     <option *ngFor="let role of rolesList" [value]="role.id">{{ role.name }}</option>
+                   </select>
+                   <div *ngIf="roleForm.controls['roleId']?.invalid">
+                     <span *ngIf="roleForm.controls['roleId']?.errors?.['required']">Position is required</span>
+                     <span *ngIf="roleForm.controls['roleId']?.errors?.['roleAlreadyExists']">This position already exists</span>
+                   </div>
+                 </div>
+               <br>
+
+                 <div class="col">
+                   <label for="isManagerialRole">isManagerialRole</label>
+                   <input type="checkbox" formControlName="isManagerialRole" id="isManagerialRole">
+                 </div>
+               <br>
+
+                 <div class="col">
+                   <label for="startDateRole">Choose a date</label>
+                   <input matInput type="date" id="startDateRole" name="startDateRole" formControlName="startDateRole"
+                     placeholder="Entry Date" required class="form-control">
+                   <div *ngIf="roleForm.controls['startDateRole']?.invalid ">
+                     <span *ngIf="roleForm.controls['startDateRole']?.errors?.['required']">Entry Date is required</span>
+                     <span *ngIf="roleForm.controls['startDateRole']?.errors?.['startDateRoleInvalid']">Entry date must be after start date</span>
+                   </div>
+                 </div>
+               <br>
+
+                 <button mat-icon-button (click)="deleteRole(i)">
+                   Delete
+               </button>
+               </div>
+               <br>
+                  <button type="button" (click)="addRole()">Add Role</button>
+                  <br>
+               <br>
+
+          <button type="submit">Save Changes</button>
+        </form>
+    </div>
+    </div>  

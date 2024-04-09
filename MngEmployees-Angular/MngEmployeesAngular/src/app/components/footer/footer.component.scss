@@ -1,0 +1,32 @@
+
+.footer {
+    background-color: #a6d6f6;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999; /* ערך גבוה יותר */
+}
+
+.footer .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #ddd;
+}

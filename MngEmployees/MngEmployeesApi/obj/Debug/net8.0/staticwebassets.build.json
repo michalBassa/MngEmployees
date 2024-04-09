@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "18SvrAbZnmI4uc6i+13fbRPoZ93Xu0Kd6ySr/OK7mRk=",
+  "Source": "MngEmployees.Api",
+  "BasePath": "_content/MngEmployees.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

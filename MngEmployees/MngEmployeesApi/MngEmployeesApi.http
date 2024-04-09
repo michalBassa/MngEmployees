@@ -1,0 +1,6 @@
+@MngEmployeesApi_HostAddress = http://localhost:5145
+
+GET {{MngEmployeesApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
