@@ -6,7 +6,6 @@ import { RoleService } from '../../../services/role.service';
 import { EmployeeService } from '../../../services/employee.service';
 import { EmployeeModel } from '../../../models/employeeModel';
 import { CommonModule, formatDate } from '@angular/common';
-import { GenderPipe } from '../../../gender.pipe';
 import Swal from 'sweetalert2';
 import { EmployeeRoleModel } from '../../../models/employeeRoleModel';
 import { DateValidators } from '../../../date-validators';
@@ -15,7 +14,7 @@ import { DateValidators } from '../../../date-validators';
 @Component({
   selector: 'app-edit-employee',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule,GenderPipe],
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './edit-employee.component.html',
   styleUrl: './edit-employee.component.scss'
 })
@@ -98,11 +97,10 @@ export class EditEmployeeComponent {
   
   validateRoleId(control: AbstractControl): ValidationErrors | null {
     const roleId = control.value;
-    const existinRoles = this.roleGroups
-      .filter(group => group !== control.parent) // Exclude current group
-      .map(group => group.value.roleId);
+    const existinRoles = this.roleGroups.map(group => group.value.roleId);
+    const oldRoles=this.employee.employeeRoles.map(r=>r.roleId)
     // Check if the control is dirty and if the role exists in other groups
-    if (control.dirty && existinRoles.includes(roleId)) {
+    if (control.dirty && existinRoles.includes(roleId)||control.dirty &&oldRoles.includes(roleId)) {
       return { roleAlreadyExists: 'Role already exists in the list' };
     }
     return null;
@@ -124,6 +122,12 @@ export class EditEmployeeComponent {
       isManagerialRole: [false],
       startDateRole: ['', [Validators.required, this.validatestartDateRole.bind(this)]]
     });
+
+  // מעקב אחר שינויים ב-roleId
+  roleForm.get('roleId')?.valueChanges.subscribe(() => {
+    // עדכון הוולידציה של roleId בכל שינוי
+    roleForm.get('roleId')?.updateValueAndValidity();
+  });
     roleForm.get('startDateRole')?.valueChanges.subscribe((value) => {
       if (value) {
         const formattedDate = new Date(value); // המרת המחרוזת לתאריך מסוג Date
@@ -132,6 +136,7 @@ export class EditEmployeeComponent {
     });
         this.roleGroups.push(roleForm);
   }
+
   formatDate(date: Date): string {
     return formatDate(date, 'yyyy-MM-dd', 'en-US');
   }
@@ -148,8 +153,6 @@ export class EditEmployeeComponent {
   updateEmployee(): void {
     if (this.editEmployeeForm.valid) {
       const employeeData: EmployeeModel = this.editEmployeeForm.value;
-      //employeeData.startWorkDate = this.formatDate(this.editEmployeeForm.value.startWorkDate);// Formatting startDate
-     // employeeData.birthDate = this.formatDate(this.editEmployeeForm.value.birthDate); // Formatting dateBirth
       const roles: EmployeeRoleModel[] = this.roleGroups.map(group => group.value);
       employeeData.employeeRoles = roles;
       console.log("employeeData", employeeData);

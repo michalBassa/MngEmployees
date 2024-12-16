@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TmnvBCB07fEySS86uCAJH72aXIgxou+R9Hw0ADOhh6D4+t2ZubIlgAJfoe8SbXom0s133QaSY+cHAfMRAV5dgA==",
+  "dgSpecHash": "LOALXYwqhfPysWiTZlZQoWHblrYjh9Dl6MFWgpzINLj/zLIqIMfH7FnBCnoETlpahpsi+wi9A/HstBVlsfZmtg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",

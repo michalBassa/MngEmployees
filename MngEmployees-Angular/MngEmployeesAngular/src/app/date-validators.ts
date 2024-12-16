@@ -24,15 +24,5 @@ export class DateValidators {
     return null;
   }
   
-//  static validatestartDateRole(control: AbstractControl, startWorkDate: Date): ValidationErrors | null {
-//     const startDateRole = new Date(control.value);
-  
-//     if (startDateRole < startWorkDate) {
-//       return { startDateRoleInvalid: true };
-//     }
-  
-//     return null;
-//   }
-  
 
 }

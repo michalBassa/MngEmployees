@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj": {}
+    "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj": {
+    "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj",
         "projectName": "MngEmployees.Core",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Core\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj": {
+    "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj",
         "projectName": "MngEmployees.Data",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Data\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj"
+              "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj"
               }
             }
           }

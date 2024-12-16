@@ -7,11 +7,14 @@ import Swal from 'sweetalert2';
 import * as xlsx from 'xlsx';
 import { EmployeeService } from '../../../services/employee.service';
 import { EmployeeModel } from '../../../models/employeeModel';
+import { GenderPipe } from '../../../gender.pipe';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { EmployeeDetailsComponent } from '../employee-details/employee-details.component';
 
 @Component({
   selector: 'app-all-employees',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,GenderPipe],
   templateUrl: './all-employees.component.html',
   styleUrl: './all-employees.component.scss'
 })
@@ -19,14 +22,14 @@ export class AllEmployeesComponent implements OnInit  {
   public employeesList: EmployeeModel[] = [];
   public filteredEmployeesList: EmployeeModel[] = [];
   public searchText: string = '';
-  constructor(private _employeeService:EmployeeService , private router: Router) {}
+  
+  constructor(private _employeeService:EmployeeService , private router: Router,private modalService: NgbModal) {}
+  
   ngOnInit():void {
     this._employeeService.getEmployeesList().subscribe({
       next: (res) => {
-       console.log("res",res)
       this.employeesList= res.filter(e=>e.activityStatus);// רק עובדים פעילים
-        this.filteredEmployeesList = [...this.employeesList]; // בתחילה, הרשימה המסוננת היא זהה לרשימה המלאה
-        console.log("filter",this.filteredEmployeesList)
+      this.filteredEmployeesList = [...this.employeesList]; // בתחילה, הרשימה המסוננת היא זהה לרשימה המלאה
       },
       error: (err) => {
         console.log(err);
@@ -50,29 +53,7 @@ export class AllEmployeesComponent implements OnInit  {
       });
     }
   }
-  // async deleteEmployee(employee: EmployeeModel) {
-  //   const isConfirmed = await Swal.fire({
-  //     title: "Are you sure ?",
-  //     text: "You won't be able to revert this!",
-  //     icon: "warning",
-  //     showCancelButton: true,
-  //     confirmButtonColor: "#3085d6",
-  //     cancelButtonColor: "#d33",
-  //     confirmButtonText: "Yes, delete it!"
-  //   }).then((result) => result.isConfirmed);
-  //   if (isConfirmed) {
-  //     await this._employeeService.changeEmployeeToNonActivate(employee.id);
-  //     this.filteredEmployeesList = this.filteredEmployeesList.filter(
-  //       (filteredEmployee) => filteredEmployee.id !== employee.id
-  //     );
-  //     Swal.fire({
-  //       title: "Deleted!",
-  //       text: "Your file has been deleted.",
-  //       icon: "success"
-  //     });
-  //   }
-  // }
-
+  
 
   deleteEmployee(employee: EmployeeModel)  {
     Swal.fire({
@@ -92,7 +73,7 @@ export class AllEmployeesComponent implements OnInit  {
                     "Your file has been deleted.",
                     "success"
                 );
-                this.filteredEmployeesList = this.filteredEmployeesList.filter(//מכוער!!!
+                this.filteredEmployeesList = this.filteredEmployeesList.filter(
                          (filteredEmployee) => filteredEmployee.id !== employee.id);
             },
             error: (err) => {
@@ -105,7 +86,12 @@ export class AllEmployeesComponent implements OnInit  {
 }
   
  exportToExcel() {
-  const worksheet = xlsx.utils.json_to_sheet(this.filteredEmployeesList);
+  // יצירת רשימת העובדים ללא העמודה של התפקידים
+  const employeesWithoutRoles = this.filteredEmployeesList.map(employee => {
+    const { employeeRoles, ...employeeWithoutRoles } = employee;
+    return employeeWithoutRoles;
+  });
+  const worksheet = xlsx.utils.json_to_sheet(employeesWithoutRoles);
   const workbook = xlsx.utils.book_new();
   xlsx.utils.book_append_sheet(workbook, worksheet, 'Employees');
   xlsx.writeFile(workbook, 'employees_data.xlsx');
@@ -116,7 +102,10 @@ addEmployee(){
 editEmployee(id:number){
       this.router.navigate(['/employees/edit-employee',id]);
 }
-
+openEmployeeDetails(employee: EmployeeModel) {
+  const modalRef = this.modalService.open(EmployeeDetailsComponent, { size: 'lg' });
+  modalRef.componentInstance.employee = employee;
+}
 
 
 }

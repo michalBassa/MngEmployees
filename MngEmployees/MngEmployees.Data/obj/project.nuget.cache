@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VE8+RZehyBAK3ZUF27HpjYjZAENwpOLNMS/xIR0qK44nf2Nj5tj11fXbyVlEgkkpSHykEqqqsvAjxCJGBy+wEw==",
+  "dgSpecHash": "GmaBSS80/aocbycjYXr7NOiWOk2gQ3mBdV+bmK0PD3O2Pqo0BWn8FkWRNtlDw72AbUfvlRwchWuImHsGis2LPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

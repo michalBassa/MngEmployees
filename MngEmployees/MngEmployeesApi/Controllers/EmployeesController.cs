@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MngEmployees.Api.Models;
@@ -60,7 +61,6 @@ namespace MngEmployees.Api.Controllers
             return Ok(_mapper.Map<EmployeeDTO>(employee));
 
         }
-
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {

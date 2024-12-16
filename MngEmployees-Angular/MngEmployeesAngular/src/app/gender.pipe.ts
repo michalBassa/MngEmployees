@@ -5,15 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true
 })
 export class GenderPipe implements PipeTransform {
-  transform(value: number): string {
-    if (value === 0) {
-      return 'זכר';
-    } else if (value === 1) {
-      return 'נקבה';
-    } else {
-      return 'לא ידוע';
-    }
+
+  transform(gender:number): string {
+    return gender==0? '../assets/images/male.png':'../assets/images/female.png';
   }
- 
 
 }

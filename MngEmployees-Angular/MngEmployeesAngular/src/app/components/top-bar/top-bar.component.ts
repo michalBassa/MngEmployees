@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AllEmployeesComponent } from '../employee/all-employees/all-employees.component';
 
 @Component({
   selector: 'app-top-bar',

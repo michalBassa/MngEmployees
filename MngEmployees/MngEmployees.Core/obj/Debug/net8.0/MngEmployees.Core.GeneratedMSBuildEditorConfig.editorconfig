@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MngEmployees.Core
-build_property.ProjectDir = C:\Users\DELL\Desktop\פרויקט פרקטיקום\MngEmployees\MngEmployees.Core\
+build_property.ProjectDir = C:\Users\DELL\Desktop\ניהול עובדים\MngEmployees\MngEmployees\MngEmployees.Core\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

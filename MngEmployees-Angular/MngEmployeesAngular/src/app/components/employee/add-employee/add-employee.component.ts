@@ -55,23 +55,7 @@ export class AddEmployeeComponent implements OnInit {
     });
   }
 
-  // addRole(): void {
-  //   const roleForm = this._formBuilder.group({
-  //     roleId: ['', [Validators.required, this.validateroleId.bind(this)]],
-  //     isManagerialRole: [false],
-  //     startDateRole: ['', [Validators.required, DateValidators.validatestartDateRole.bind(this, this.addEmployeeForm.get('startWorkDate')?.value)]]
-  //   });
-
-  //   roleForm.get('startDateRole')?.valueChanges.subscribe((value) => {
-  //     if (value) {
-  //       const formattedDate = new Date(value);
-  //       roleForm.get('startDateRole')?.setValue(this.formatDate(formattedDate), { emitEvent: false });
-  //     }
-  //   });
-
-  //   this.roleGroups.push(roleForm);
-  //   this.showRoleFields = true;
-  // }
+  
   validatestartDateRole(control: AbstractControl): ValidationErrors | null {
     const startDateRole = new Date(control.value);
     const startWorkDate = new Date(this.addEmployeeForm.get('startWorkDate')?.value);
@@ -96,7 +80,6 @@ export class AddEmployeeComponent implements OnInit {
         roleForm.get('startDateRole')?.setValue(this.formatDate(formattedDate), { emitEvent: false });
       }
     });
-
     this.roleGroups.push(roleForm);
     this.showRoleFields = true;
   }
@@ -104,11 +87,9 @@ export class AddEmployeeComponent implements OnInit {
   validateroleId(control: AbstractControl): ValidationErrors | null {
     const roleId = control.value;
     const existingRoles = this.roleGroups.map(group => group.value.roleId);
-
     if (control.dirty && existingRoles.includes(roleId)) {
       return { roleAlreadyExists: 'Role already exists in the list' };
     }
-
     return null;
   }
 

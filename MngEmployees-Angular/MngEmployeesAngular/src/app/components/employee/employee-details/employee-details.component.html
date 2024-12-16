@@ -1,1 +1,15 @@
-<p>employee-details works!</p>
+<div class="modal-header">
+    <h4 class="modal-title">{{ employee.firstName }} {{ employee.lastName }}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+    <p>First Name: {{ employee.firstName }}</p>
+    <p>Last Name: {{ employee.lastName }}</p>
+    <p>Identity Number: {{ employee.tz }}</p>
+    <p>Start Date: {{ employee.startWorkDate | date }}</p>
+  
+    <div class="list-group" appHideIfEmpty [data]="employee.employeeRoles">
+        <p>Roles:</p>
+        <span *ngFor="let role of employee.employeeRoles" class="list-group-item">{{getRoleNameById(role.roleId)}}</span>
+      </div>
+</div>

@@ -25,7 +25,7 @@ namespace MngEmployees.Data.Repositories
         }
         public async Task<IEnumerable<Employee>> GetAllAsync()
         {
-            return await _dataContext.EmployeesDb.ToListAsync();
+            return await _dataContext.EmployeesDb.Include(e => e.EmployeeRoles).ToListAsync();
         }
         public async Task<Employee> GetByIdAsync(int id)
         {
@@ -52,10 +52,7 @@ namespace MngEmployees.Data.Repositories
             await _dataContext.SaveChangesAsync();
             return existEmployee;
         }
-        //public async Task<IEnumerable<Employee>> GetEmployeeDetails(int id)
-        //{
-        //    return await _dataContext.EmployeesDb.Where(e => e.Id == id).Include(r => r.EmployeeRoles).ToListAsync();
-        //}
+       
        
     } 
 }

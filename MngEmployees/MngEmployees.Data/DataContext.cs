@@ -19,8 +19,11 @@ namespace MngEmployees.Data
         public DbSet<EmployeeRole> EmployeesRolesDb { get; set; }
         public DbSet<Role> RolesDb { get; set; }
 
+        public DbSet<User> UsersDb { get; set; }
 
-       
-       
+
+
+
+
     }
 }

@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AllEmployeesComponent } from '../all-employees/all-employees.component';
-import { EditEmployeeComponent } from '../edit-employee/edit-employee.component';
-import { AddEmployeeComponent } from '../add-employee/add-employee.component';
-
-
-
+import { AllEmployeesComponent } from '../components/employee/all-employees/all-employees.component';
+import { EditEmployeeComponent } from '../components/employee/edit-employee/edit-employee.component';
+import { AddEmployeeComponent } from '../components/employee/add-employee/add-employee.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'all-employees', pathMatch: 'full' },

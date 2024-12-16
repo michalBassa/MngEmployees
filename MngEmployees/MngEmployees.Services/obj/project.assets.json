@@ -2692,11 +2692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Services\\MngEmployees.Services.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Services\\MngEmployees.Services.csproj",
       "projectName": "MngEmployees.Services",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Services\\MngEmployees.Services.csproj",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Services\\MngEmployees.Services.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Services\\obj\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2713,11 +2713,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj"
+            "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Core\\MngEmployees.Core.csproj"
             },
-            "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Desktop\\פרויקט פרקטיקום\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj"
+            "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\ניהול עובדים\\MngEmployees\\MngEmployees\\MngEmployees.Data\\MngEmployees.Data.csproj"
             }
           }
         }
